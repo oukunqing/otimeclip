@@ -1,0 +1,42 @@
+.otimeclip-canvas{z-index:2000; height:75px; background:#000; color:#b1b1b1; position:relative;margin:0;padding:0;border:none;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select: none;
+}
+.otimeclip-canvas div,.otimeclip-canvas a,.otimeclip-canvas label,.otimeclip-canvas span{
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select: none;
+}
+.otimeclip-button{color:#b1b1b1;display:block; height:20px; line-height:20px; float:left; margin:2px 0 0 9px; font-size:12px;font-family:宋体,Arial;border:none;}
+.otimeclip-button a{width:50px;height:20px; display:inline-block; cursor:pointer; text-indent:22px; margin-right:3px; color:#b1b1b1; text-decoration:none;border:none;}
+.otimeclip-button .save{background:url("imgs/btn.png") 0 0;}
+.otimeclip-button .play{background:url("imgs/btn.png") 0 -20px; text-indent:20px;}
+.otimeclip-button .stop{background:url("imgs/btn.png") 0 -40px; text-indent:20px;}
+.otimeclip-button .down{background:url("imgs/btn.png") 0 -60px; text-indent:20px;}
+
+.otimeclip-iconbtn{display:block; width:143px; height:20px; float:left; margin:2px 0 0 20px; background:url("imgs/iconbtn.png") 0 0;}
+
+
+.otimeclip-status{color:#b1b1b1; font-size:12px; font-family:宋体,Arial; line-height:20px; margin:2px 0 0 5px; float:left;border:none; cursor:default;}
+.otimeclip-board{color:#ceac33; font-size:13px; line-height:20px;}
+
+.otimeclip-bg,.otimeclip-line{
+	height:3px;position:absolute;left:10px;bottom:12px;margin:0;padding:0;border:none;border-top:5px solid #000;border-bottom:5px solid #000;
+}
+.otimeclip-bg{z-index:2001; background:#ceac33;}
+.otimeclip-line{z-index:2002; background:#3c3c3c;}
+
+
+.otimeclip-arrow{z-index:2003; position:absolute;bottom:0;width:10px;height:15px; display:inline-block; font-size:5px;margin:0;padding:0;border:none; cursor:default;}
+
+.otimeclip-arrow-left{background:url("imgs/arrow.png") 0 0; left:0;}
+
+.otimeclip-arrow-right{background:url("imgs/arrow.png") -10px 0; right:0;}
+
+.otimeclip-speed{font-size:12px; margin:2px 0px 3px 10px; line-height:20px; float:left; border:none;cursor:default;}
+.otimeclip-speed .play-speed{height:18px; margin:0;padding:0; border:solid 1px #000; color:#fff; background:#000;}
+
+.otimeclip-drag-play{float:left;margin:0 0 3px 5px;cursor:default; line-height:24px;}
+.otimeclip-drag-play .otimeclip-drag{float:left;margin-top:5px;}
+.otimeclip-drag-play span{font-size:12px;float:left;}

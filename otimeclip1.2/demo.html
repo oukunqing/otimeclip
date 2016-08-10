@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{margin:20px;}
+</style>
+<link type="text/css" rel="stylesheet" href="otimeclip.css" />
+<script type="text/javascript" src="otimeclip.js"></script>
+</head>
+
+<body>
+<div id="divProcess" style="margin:0px;"></div>
+<br />
+调试框：<br />
+<textarea id="txt1" style="width:720px;height:200px;"></textarea>
+<br />
+<a href="javascript:onceAgain()">再来一次</a>
+</body>
+</html>
+<script type="text/javascript">
+alert(navigator.userAgent);
+var clip = new oTimeClip('clip1', document.getElementById('divProcess'), {
+	width: 520,
+	callback: clipCallback,
+	param: {
+		startTime: '2016-03-22 10:00:00',
+		endTime: '2016-03-22 15:00:00',
+		clipStartTime: '2016-03-22 11:00:00',
+		clipEndTime: '2016-03-22 14:00:00',
+		playSpeedEnabled: true,
+		playSpeedShow: true
+	},
+	customCallback: {
+		save: function(param, objClip){
+			alert('save:' + param.clipTime);
+		},
+		down: function(param, objClip){
+			alert('down:' + param.clipTime);
+		},
+		play: function(param, objClip){
+			alert(param.left/param.total);
+			alert('play:' + param.clipTime);
+		},
+		stop: function(param, objClip){
+			alert('stop:' + param.clipTime);
+		},
+	}
+});
+
+function onceAgain(){
+	clip.initial({
+		param:{
+			startTime: '2016-03-22 10:00:00',
+			endTime: '2016-03-22 15:00:00',
+			clipStartTime: '2016-03-22 11:00:00',
+			clipEndTime: '2016-03-22 14:00:00'
+		}
+	});
+}
+
+function clipCallback(param, objClip){
+	
+	var arr = [
+		'Total:' + param.total,
+		', Left:' + param.left,
+		', Right:' + param.right,
+		', Clip:' + (param.clip),
+		'\r\nClipTime:' + (param.clipTime)
+	];
+	
+	objClip.$('txt1').value = arr.join('');
+}
+</script>
